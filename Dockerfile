@@ -4,4 +4,6 @@ WORKDIR /bot
 ADD . .
 RUN pip install -r ./requirements.txt
 
+ENV PYTHONUNBUFFERED=0
+
 ENTRYPOINT [ "python", "main.py" ]
